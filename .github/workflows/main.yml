@@ -41,9 +41,9 @@ jobs:
     - name: Lint with ruff and run django tests
       # Добавляем env-переменные для доступа к БД
       env:
-        POSTGRES_USER: django_user
-        POSTGRES_PASSWORD: django_password
-        POSTGRES_DB: django_db
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: Kristina2710
+        POSTGRES_DB: postgres
         # Сервер БД запущен в Docker, но его порт проброшен на хост
         # Поэтому подключаемся к 127.0.0.1:5432
         DB_HOST: 127.0.0.1
@@ -148,4 +148,4 @@ jobs:
           context: ./gateway/
           push: true
           # Тут вместо username должен быть ваш логин на Docker Hub
-          tags: username/taski_gateway:latest
+          tags: christina2710/taski_gateway:latest
